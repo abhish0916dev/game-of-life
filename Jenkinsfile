@@ -4,7 +4,7 @@ node('AGENT'){
             branch: 'scripted'
     }
     stage('Build the code'){
-        sh 'mvn package'
+        sh 'PATH="usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH" && mvn package'
     }
     stage('Archive Artifact'){
         archiveArtifacts artifacts: '**/target/gameoflife.war',
