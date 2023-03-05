@@ -1,3 +1,4 @@
+//declarative pipeline for Game-of-life"
 pipeline{
     agent{label 'AGENT'}
     // triggers {cron ('H/2 * * * *')}
@@ -27,3 +28,5 @@ pipeline{
         }
     }
 }
+
+
