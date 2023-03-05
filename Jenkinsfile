@@ -1,6 +1,7 @@
 pipeline{
     agent{label 'AGENT'}
-    triggers {cron ('H/2 * * * *')}
+    // triggers {cron ('H/2 * * * *')}
+    triggers{pollSCM('* * * * *')}
     stages{
         stage('VCS'){
             steps{
