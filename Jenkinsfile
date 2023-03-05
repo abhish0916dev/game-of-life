@@ -11,7 +11,7 @@ node('AGENT'){
                         onlyIfSuccessful: true
     }
     stage('Test Results'){
-        junit testResults: '**/game-of-life-web/target/surefire-reports/TEST-*.xml'
+        junit testResults: '**/surefire-reports/TEST-*.xml'
     }
         
 }
