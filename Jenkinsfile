@@ -1,5 +1,6 @@
 pipeline{
     agent{label 'AGENT'}
+    triggers {cron ('H/2 * * * *')}
     stages{
         stage('VCS'){
             steps{
