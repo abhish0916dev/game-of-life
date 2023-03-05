@@ -9,6 +9,11 @@ pipeline{
         }
         stage('Build'){
             steps{
+                sh 'export PATH="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH" && mvn package'
+            }
+        }
+        stage('Archieve Artifact'){
+            steps{
                 archiveArtifacts artifacts: '**/target/gameoflife.war',
                         onlyIfSuccessful: true
             }
