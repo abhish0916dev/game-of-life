@@ -10,5 +10,8 @@ node('AGENT'){
         archiveArtifacts artifacts: '**/target/gameoflife.war',
                         onlyIfSuccessful: true
     }
+    stage('Test Results'){
+        junit testResults: '**/game-of-life-web/target/surefire-reports/TEST-*.xml'
+    }
         
 }
