@@ -36,20 +36,20 @@ pipeline{
             }
         }
     }
-    post{
-        success{
-            mail subject: "Jenkins jobs of ${JOB_NAME} of with ${BUILD_ID} is successfull",
-                 body: "Please use this url ${BUILD_URL} for more information",
-                 to: 'abhishek16tiwary@gmail.com',
-                 from: 'jenkins@abhish.com'
-        }
-        failure{
-            mail subject: "Jenkins jobs of ${JOB_NAME} of with ${BUILD_ID} is Failed",
-                 body: "Please use this url {$BUILD_URL} for more information",
-                 to: '${GIT_AUTHOR_EMAIL}',
-                 from: 'jenkins@abhish.com'
-        }
-    }
+    // post{
+    //     success{
+    //         mail subject: "Jenkins jobs of ${JOB_NAME} of with ${BUILD_ID} is successfull",
+    //              body: "Please use this url ${BUILD_URL} for more information",
+    //              to: 'abhishek16tiwary@gmail.com',
+    //              from: 'jenkins@abhish.com'
+    //     }
+    //     failure{
+    //         mail subject: "Jenkins jobs of ${JOB_NAME} of with ${BUILD_ID} is Failed",
+    //              body: "Please use this url {$BUILD_URL} for more information",
+    //              to: '${GIT_AUTHOR_EMAIL}',
+    //              from: 'jenkins@abhish.com'
+    //     }
+    // }
 }
 
 
